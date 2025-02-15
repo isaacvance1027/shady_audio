@@ -130,7 +130,7 @@ button:hover {
 }
 
 /* Clever header trick from some dude named Keith J. Grant  */
-
+/*
 .header.gradient {
     position: relative;
     min-height: 200px;
@@ -157,7 +157,7 @@ button:hover {
 
 .header.gradient:hover::before {
     opacity: 1;
-}
+} */
 
 .hex {
     font-family: 'Oswald', sans-serif;
