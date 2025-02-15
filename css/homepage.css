@@ -9,11 +9,11 @@ header {
     overflow: hidden;
 }
 
-a .fa {
+/* a .fa {
     color: lightgray !important;
     transition: all 0.3s ease-in-out;
     text-decoration: none !important;
-}
+} */
 
 .fa:hover {
     color: white !important;
@@ -27,7 +27,6 @@ p {
 .card {
     padding: 5%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
 }
 
 .card:hover {
@@ -121,7 +120,7 @@ button:hover {
 .header {
     background-color: #343a40;
     filter: blur(20px);
-    transition: all 0.5s ease-in-out; /* Animation duration and easing */
+    /* transition: all 0.5s ease-in-out; Animation duration and easing */
     padding-top: 10rem;
     height: 100vh;
 }
