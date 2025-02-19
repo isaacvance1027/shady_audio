@@ -1,228 +1,90 @@
-header {
-    font-family: 'Oswald', sans-serif;
-    width: 100%;
-    text-align: center;
-    position: relative;
-    background: #0F78B8;
-    color: white;
-    padding: 50px 0px 80px 0px;
-    overflow: hidden;
-}
-
-/* a .fa {
-    color: lightgray !important;
-    transition: all 0.3s ease-in-out;
-    text-decoration: none !important;
-} */
-
-.fa:hover {
-    color: white !important;
-    filter: drop-shadow(2px 2px 4px white);
-}
-
-p {
-    text-align: justify;
-}
-
-.card {
-    padding: 5%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
-
-.card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-
-#social-links {
-    float: right;
-    padding-right: 10px;
-}
-
-#social {
-    background-color: rgb(52, 58, 64);
-    display: 100px;
-    text-align: center;
-}
-
-#footer {
-    padding: 0px;
-    margin-bottom: 0 !important;
-    height: 100px;
-}
-
-@media (max-width:990px) {
-
-    #social-links {
-        display: none;
-    }
-
-    #footer {
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 50px;
-        padding: 0px;
-    }
-
-    #social {
-        padding-top: 10px;
-    }
-
-    #resumePadding {
-        padding-left: 10%;
-    }
-
-    #floating-audio {
-        transform: scale(0.75);
-        margin-right: -4rem;
-        margin-bottom: 2rem;
-    }
-}
-
-#main-photo {
-    border-style: none;
-    padding-top: 5rem;
-    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.7) inset; /* Adjust the shadow values as needed */
-}
-
-#quotecontainer:hover {
-    color: white;
-    cursor: pointer;
-}
-
-.blockquote-footer {
-    text-align: right;
-    color:whitesmoke;
-}
-
-#searchButton {
-    background: #0F78B8;
-    color: white;
-}
-
-button:hover {
-    transition-duration: 0.4s;
-    border-radius: 4px;
-    background-color: #0F78B8;
-    color: white;
-}
-
-.content {
-    display: block;
-    margin-block-start: 1.33em;
-    margin-block-end: 1.33em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
-}
-
-.header {
-    background-color: #343a40;
-    filter: blur(20px);
-    /* transition: all 0.5s ease-in-out; Animation duration and easing */
-    padding-top: 10rem;
-    height: 100vh;
-}
-
-.header.active {
-    filter: blur(0px);
-}
-
-/* Clever header trick from some dude named Keith J. Grant  */
-/*
-.header.gradient {
-    position: relative;
-    min-height: 200px;
-    background-image: linear-gradient(
-        #343a40, #fff
-    );
-    z-index: 1;
+@font-face {
+    font-family: 'Agrandir Grand';
+    src: url('fonts/Agrandir-Grand.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
   }
 
-.header.gradient::before {
-    position: absolute;
-    content: "";
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(
-        #fff, #343a40
-    );
-    z-index: -3;
-    transition: opacity 0.5s linear;
-    opacity: 0;
-}
-
-.header.gradient:hover::before {
-    opacity: 1;
-} */
-
-.hex {
-    font-family: 'Oswald', sans-serif;
-    background-color: #343a40;
-    font-size: 2rem;
-    border-color: #343a40;
-    position: relative;
-    display: inline-block;
-    transition: 0.1s ease-in;
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
+  }
 
-.hex:hover, .hex:focus {
-    color: #343a40;
-    background-color: white;
-    cursor: pointer;
-}
+  /* Base styling */
+  body {
+    background-color: #d9d7d4;
+    font-family: 'Agrandir Grand', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers items horizontally */
+    text-align: center;
+  }
 
-.projects {
-    font-family: 'Oswald', sans-serif;
+  /* Header */
+  header {
+    /* By default, the header is at the top.
+       You can add margin or padding for spacing. */
+    flex: 0 0 auto; /* Keep header at its natural height */
+    margin-top: 2rem; /* Adjust as needed */
+  }
+
+  /* Logo container */
+  .logo-container {
+    max-width: 600px; /* Adjust width to control logo size */
+    margin: 0 auto 2rem auto;
+  }
+
+  .logo-container img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Services navigation (Tracking, Mixing, Live Sound) */
+  .services {
+    display: flex;
+    justify-content: center;
+    gap: 3rem; /* Spacing between links; tweak to taste */
+  }
+
+  .services a {
     font-size: 2rem;
-    display: inline-block;
-    transition: 0.1s ease-in;
-}
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #343a40;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+  }
 
-.projects:hover{
-    background-color: white;
-    color:#343a40
-}
+  .services a:hover {
+    color: #d8d7d3;
+    text-decoration: underline;
+  }
 
-.hex.project {
-    color:#343a40;
-    position: absolute !important;
-}
+  /* Main (center area) */
+  main {
+    flex: 1 0 auto; /* Expands to fill available space */
+    display: flex;
+    align-items: center;  /* Vertically center the tagline */
+    justify-content: center;
+  }
 
-section {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: opacity 0.5s, transform 0.5s;
-}
+  /* Tagline */
+  .tagline {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
 
-section.show {
-    opacity: 1;
-    transform: translateX(0);
-}
+  /* Footer (bottom) */
+  footer {
+    flex: 0 0 auto;
+    margin-bottom: 2rem; /* Adjust as needed */
+  }
 
-.project:hover, .project:focus {
-    color: #343a40 !important;
-}
-
-/* Floating audio parent div style */
-#floating-audio {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    color: #fff;
-    cursor: pointer;
-    z-index: 5000; /* Ensure it's above other content */
-}
-
-/* Fig Caption for audio */
-#audio-caption {
-    mix-blend-mode: multiply;
-    color: black;
-}
-
+  /* Names */
+  .names {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
