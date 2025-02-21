@@ -1,12 +1,12 @@
 @font-face {
     font-family: 'Agrandir Grand';
-    src: url('fonts/Agrandir-Grand.otf') format('opentype');
+    src: url('fonts/Agrandir-GrandLight.otf') format('opentype');
     font-weight: normal;
     font-style: normal;
   }
 
-/* Reset */
-* {
+  /* Reset */
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -52,15 +52,9 @@
   .services a {
     font-size: 2rem;
     font-weight: bold;
+    font-family: 'Agrandir Grand', sans-serif;
     text-transform: uppercase;
-    color: #343a40;
     text-decoration: none;
-    transition: color 0.3s ease-in-out;
-  }
-
-  .services a:hover {
-    color: #d8d7d3;
-    text-decoration: underline;
   }
 
   /* Main (center area) */
@@ -75,6 +69,7 @@
   .tagline {
     padding-top: 50px;
     padding-bottom: 50px;
+    padding-right: 15px;
   }
 
   /* Footer (bottom) */
@@ -87,4 +82,17 @@
   .names {
     font-size: 1.2rem;
     text-transform: uppercase;
+  }
+
+  /* Media query for smaller screens */
+  @media (max-width: 768px) {
+    .services {
+      flex-direction: column;  /* Stack vertically */
+      align-items: center;     /* Center them */
+      gap: 1rem;               /* Reduce the gap for smaller screens */
+    }
+
+    .services a {
+      font-size: 1.5rem;       /* Slightly reduce font size */
+    }
   }
