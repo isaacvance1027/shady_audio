@@ -1,98 +1,214 @@
 @font-face {
-    font-family: 'Agrandir Grand';
-    src: url('fonts/Agrandir-GrandLight.otf') format('opentype');
-    font-weight: normal;
-    font-style: normal;
-  }
+  font-family: 'Agrandir Grand';
+  src: url('fonts/Agrandir-GrandLight.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
 
-  /* Reset */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  /* Base styling */
-  body {
-    background-color: #d9d7d4;
-    font-family: 'Agrandir Grand', sans-serif;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centers items horizontally */
-    text-align: center;
-  }
+/* Base styling */
+body {
+  background-color: #d9d7d4;
+  font-family: 'Agrandir Grand', sans-serif;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
 
-  /* Header */
-  header {
-    /* By default, the header is at the top.
-       You can add margin or padding for spacing. */
-    flex: 0 0 auto; /* Keep header at its natural height */
-    margin-top: 2rem; /* Adjust as needed */
-  }
+/* Header */
+header {
+  flex: 0 0 auto;
+  margin-top: 2rem;
+}
 
-  /* Logo container */
-  .logo-container {
-    max-width: 600px; /* Adjust width to control logo size */
-    margin: 0 auto 2rem auto;
-  }
+/* Logo container */
+.logo-container {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  padding-left: 10px;
+}
 
-  .logo-container img {
-    width: 100%;
-    height: auto;
-  }
+.logo-container img {
+  width: 100%;
+  height: auto;
+}
 
-  /* Services navigation (Tracking, Mixing, Live Sound) */
+/* Services navigation */
+.services {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.services span {
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Agrandir Grand', sans-serif;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+/* Tagline */
+.tagline {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  flex-shrink: 0;
+  width: 100%;
+  margin-top: auto;
+}
+
+.names {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  padding: 1rem 0 0.5rem 0;
+  background-color: #343a40;
+  color: white;
+}
+
+#social {
+  background-color: #343a40;
+  text-align: center;
+  padding: 1rem 0;
+  width: 100%;
+}
+
+.social.list-inline {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social.list-inline li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
   .services {
-    display: flex;
-    justify-content: center;
-    gap: 3rem; /* Spacing between links; tweak to taste */
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
   }
 
   .services a {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Agrandir Grand', sans-serif;
-    text-transform: uppercase;
-    text-decoration: none;
+    font-size: 1.5rem;
   }
+}
 
-  /* Main (center area) */
-  main {
-    flex: 1 0 auto; /* Expands to fill available space */
-    display: flex;
-    align-items: center;  /* Vertically center the tagline */
-    justify-content: center;
-  }
+/* Gray bar at top with no content */
+.top-bar {
+  width: 100%;
+  background-color: #343a40;
+  height: 2rem;
+}
 
-  /* Tagline */
-  .tagline {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    padding-right: 15px;
-  }
+.below-tagline-links {
+  display: flex;
+  justify-content: center;
+  gap: 6rem; /* More space between links */
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
 
-  /* Footer (bottom) */
-  footer {
-    flex: 0 0 auto;
-    margin-bottom: 2rem; /* Adjust as needed */
-  }
+.below-tagline-links a {
+  color: #343a40;
+  text-decoration: none;
+  font-family: 'Agrandir Grand', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease-in-out;
+}
 
-  /* Names */
-  .names {
-    font-size: 1.2rem;
-    text-transform: uppercase;
-  }
+.below-tagline-links {
+  display: flex;
+  justify-content: center;
+  gap: 6rem; /* Wide spacing */
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
 
-  /* Media query for smaller screens */
-  @media (max-width: 768px) {
-    .services {
-      flex-direction: column;  /* Stack vertically */
-      align-items: center;     /* Center them */
-      gap: 1rem;               /* Reduce the gap for smaller screens */
-    }
+.below-tagline-links a {
+  color: #343a40;
+  text-decoration: none;
+  font-family: 'Agrandir Grand', sans-serif;
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 4px;
+  transition: color 0.2s ease-in-out;
+}
 
-    .services a {
-      font-size: 1.5rem;       /* Slightly reduce font size */
-    }
-  }
+.below-tagline-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #343a40;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+.below-tagline-links a:hover {
+  color: #000;
+}
+
+.below-tagline-links a:hover::after {
+  transform: scaleX(1);
+}
+
+a {
+  color: #343a40;
+  text-decoration: none;
+  font-family: 'Agrandir Grand', sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: relative;
+  transition: color 0.2s ease-in-out;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 100%;
+  background-color: #343a40;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+a:hover {
+  color: #000;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+

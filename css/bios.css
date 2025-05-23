@@ -1,0 +1,60 @@
+.bios {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .bio {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    align-items: flex-start;
+  }
+
+  .bio img {
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  .bio-text {
+    flex: 1;
+    max-width: 900px;
+  }
+
+  .bio h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 0.2rem;
+    text-transform: uppercase;
+  }
+
+  .bio h4 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .bio p {
+    text-align: left;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  /* Responsive tweak: stack image and text on smaller screens */
+  @media (max-width: 768px) {
+    .bio {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .bio-text {
+      max-width: 100%;
+      text-align: left;
+    }
+
+    .bio img {
+      margin-bottom: 1rem;
+    }
+  }
